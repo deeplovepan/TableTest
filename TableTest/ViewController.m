@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomCell.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -24,7 +25,7 @@ static NSString *cellid = @"CELL_ID";
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.babyTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellid];
+    [self.babyTableView registerClass:[CustomCell class] forCellReuseIdentifier:cellid];
     
 }
 
@@ -55,6 +56,7 @@ static NSString *cellid = @"CELL_ID";
         case 0:
             cell.textLabel.text = @"天然呆寶寶";
             cell.imageView.image = [UIImage imageNamed:@"baby.png"];
+            cell.detailTextLabel.text = @"真可愛";
             break;
         case 1:
             cell.textLabel.text = @"年齡: 1歲2個月";
