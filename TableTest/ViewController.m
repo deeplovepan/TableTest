@@ -25,8 +25,8 @@ static NSString *cellid = @"CELL_ID";
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.babyTableView registerClass:[CustomCell class] forCellReuseIdentifier:cellid];
-    
+    UINib *nib = [UINib nibWithNibName:@"CellFromIb" bundle:nil];
+    [self.babyTableView registerNib:nib forCellReuseIdentifier:cellid];
 }
 
 - (void)didReceiveMemoryWarning
