@@ -15,6 +15,11 @@
     self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(29, 13, 191, 21)];
+        [self.contentView addSubview:self.nameLabel];
+        
+        self.cuteImageView = [[UIImageView alloc] initWithFrame:CGRectMake(13, 42, 44, 44)];
+        [self.contentView addSubview:self.cuteImageView];
     }
     return self;
 }
