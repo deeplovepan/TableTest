@@ -203,6 +203,14 @@ static NSString *cellid = @"CELL_ID";
 
 #pragma mark - UITableViewDelegate
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *title = [NSString stringWithFormat:@"謝謝你選了我, 我的編號是 section %d row %d",
+                       indexPath.section, indexPath.row];
+     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    [alertView show];
+    
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
