@@ -36,6 +36,44 @@ static NSString *cellid = @"CELL_ID";
 
 #pragma mark - UITableViewDataSource
 
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *title;
+    switch (section) {
+        case 0:
+            title = @"基本資訊";
+            break;
+        case 1:
+            title = @"進階資訊";
+            break;
+        case 2:
+            title = @"私密資訊";
+            break;
+        default:
+            break;
+    }
+    return title;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    NSString *title;
+    switch (section) {
+        case 0:
+            title = @"基本資訊end";
+            break;
+        case 1:
+            title = @"進階資訊end";
+            break;
+        case 2:
+            title = @"私密資訊end";
+            break;
+        default:
+            break;
+    }
+    return title;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     int rowCount = 0;
