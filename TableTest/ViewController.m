@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomCell.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -24,7 +25,7 @@ static NSString *cellid = @"CELL_ID";
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.babyTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellid];
+    [self.babyTableView registerClass:[CustomCell class] forCellReuseIdentifier:cellid];
     
 }
 
