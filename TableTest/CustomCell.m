@@ -20,6 +20,9 @@
         
         self.cuteImageView = [[UIImageView alloc] initWithFrame:CGRectMake(13, 42, 44, 44)];
         [self.contentView addSubview:self.cuteImageView];
+        
+        self.selectedBackgroundView = [[UIView alloc] init];
+        self.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
     }
     return self;
 }
