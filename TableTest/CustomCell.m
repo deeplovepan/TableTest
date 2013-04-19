@@ -15,7 +15,6 @@
     self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(29, 13, 191, 21)];
         [self.contentView addSubview:self.nameLabel];
         
